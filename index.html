@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strzelanka pod Magazynami</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="game">
+    <div id="hud">
+      <div>❤️ Życie: <span id="health">100</span></div>
+      <div>🪙 Monety: <span id="coins">0</span></div>
+      <div>🌊 Fala: <span id="wave">1</span></div>
+    </div>
+
+    <div id="crosshair">+</div>
+
+    <div id="message">Strzelanka pod Magazynami</div>
+
+    <div id="mobileControls">
+      <div id="joystick">
+        <div id="stick"></div>
+      </div>
+      <div id="lookArea"></div>
+      <button id="shootButton">STRZELAJ</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="module" src="client.js"></script>
+</body>
+</html>
