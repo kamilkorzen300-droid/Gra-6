@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+}
+
+#game {
+  width: 100vw;
+  height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+#hud {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 5;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  font-size: 18px;
+  text-shadow: 1px 1px 3px black;
+}
+
+#crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+#message {
+  position: absolute;
+  top: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  font-size: 20px;
+  text-shadow: 1px 1px 4px black;
+}
+
+#mobileControls {
+  display: none;
+}
+
+@media (pointer: coarse) {
+  #mobileControls {
+    display: block;
+  }
+
+  #joystick {
+    position: absolute;
+    bottom: 35px;
+    left: 30px;
+    width: 120px;
+    height: 120px;
+    border: 3px solid white;
+    border-radius: 50%;
+    background: #ffffff33;
+    z-index: 10;
+    touch-action: none;
+  }
+
+  #stick {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 33px;
+    top: 33px;
+    border-radius: 50%;
+    background: #ddd;
+  }
+
+  #lookArea {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 55%;
+    height: 65%;
+    z-index: 4;
+    touch-action: none;
+  }
+
+  #shootButton {
+    position: absolute;
+    right: 25px;
+    bottom: 35px;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    border: 3px solid white;
+    background: #c62828;
+    color: white;
+    font-weight: bold;
+    z-index: 12;
+  }
+}
